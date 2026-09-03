@@ -105,6 +105,10 @@ class TestVitals < Minitest::Test
     assert_equal('sha384-abc123', link['integrity'])
   end
 
+  def test_favicon_points_to_the_logo
+    assert_equal('x', Nokogiri::HTML(generate_vitals_html).xpath('//link[@rel="icon"]/@href').to_s)
+  end
+
   private
 
   def generate_vitals_html
