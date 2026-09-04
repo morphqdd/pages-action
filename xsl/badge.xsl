@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
- * SPDX-License-Identifier: MIT
+* SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
+* SPDX-License-Identifier: MIT
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/2000/svg" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0" exclude-result-prefixes="xs">
   <xsl:output method="xml" omit-xml-declaration="yes"/>
@@ -17,7 +17,7 @@
           <xsl:text>0.0</xsl:text>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="format-number($sum div $count, '0.0')" />
+          <xsl:value-of select="format-number($sum div $count, '0.0')"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
