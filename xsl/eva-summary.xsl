@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
- * SPDX-License-Identifier: MIT
+* SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
+* SPDX-License-Identifier: MIT
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:z="https://www.zerocracy.com" exclude-result-prefixes="xs z">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:z="https://www.zerocracy.com" version="2.0" exclude-result-prefixes="xs z">
   <xsl:template match="f[what='earned-value' and ac and ev and pv and xs:double(ac) != 0 and xs:double(pv) != 0]" priority="2">
     <xsl:text>AC: </xsl:text>
     <xsl:value-of select="format-number(ac, '0')"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
- * SPDX-License-Identifier: MIT
+* SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
+* SPDX-License-Identifier: MIT
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:z="https://www.zerocracy.com" exclude-result-prefixes="xs z">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:z="https://www.zerocracy.com" version="2.0" exclude-result-prefixes="xs z">
   <xsl:include href="script-with-cdata.xsl"/>
   <xsl:function name="z:iso-week" as="xs:string">
     <xsl:param name="dt" as="xs:dateTime"/>
@@ -89,7 +89,7 @@
             <xsl:text>{label:'</xsl:text>
             <xsl:value-of select="z:snake-case-to-title(substring-after($n, 'n_'))"/>
             <xsl:text>',borderColor:</xsl:text>
-            <xsl:variable name='c' select="substring-before(substring-after(concat(',', $colors, ','), concat(',', $n, ':')), ',')"/>
+            <xsl:variable name="c" select="substring-before(substring-after(concat(',', $colors, ','), concat(',', $n, ':')), ',')"/>
             <xsl:choose>
               <xsl:when test="$c">
                 <xsl:text>'</xsl:text>

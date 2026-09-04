@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
- * SPDX-License-Identifier: MIT
+* SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
+* SPDX-License-Identifier: MIT
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:z="https://www.zerocracy.com" exclude-result-prefixes="xs z">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:z="https://www.zerocracy.com" version="2.0" exclude-result-prefixes="xs z">
   <xsl:include href="script-with-cdata.xsl"/>
   <xsl:output method="xml" omit-xml-declaration="yes" encoding="UTF-8" indent="yes"/>
   <xsl:param name="today" as="xs:string"/>
@@ -134,10 +134,10 @@
     </xsl:for-each>
   </xsl:template>
   <xsl:template match="/">
-    <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
+    <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
     <html lang="en">
       <xsl:attribute name="class">
-          <xsl:value-of select="concat('palette-', $palette)"/>
+        <xsl:value-of select="concat('palette-', $palette)"/>
       </xsl:attribute>
       <head>
         <meta charset="UTF-8"/>
@@ -354,7 +354,7 @@
               <a href="{$name}.html">
                 <xsl:text>here</xsl:text>
               </a>
-              <xsl:if test="fb/@size > 1000000">
+              <xsl:if test="fb/@size &gt; 1000000">
                 <xsl:text> (they're big)</xsl:text>
               </xsl:if>
               <xsl:text>.</xsl:text>
